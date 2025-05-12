@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Madridejos Cebu Barangays Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../includes/leaflet.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #f4f4f4;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      padding: 15px 20px;
+      display: block;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .open-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1100;
+      font-size: 24px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      transition: left 0.3s, right 0.3s;
+    }
+
+    .open-btn.moved {
+      left: auto;
+      right: 15px;
+    }
+
+    .popup {
+      display: none;
+      background-color: rgba(0,0,0,0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 1100;
+    }
+
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 200px;
+    }
+
+    .popup-content p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button-group button {
+      width: 150px;
+      padding: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color: white;
+      transition: background-color 0.2s;
+    }
+
+    .button-group button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mySidebar" class="sidebar">
+    <center>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#" id="exitConfirmButton">Exit</a>
+    </center>
+  </div>
+
+  <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+  <div id="popupCloseRight" class="popup">
+    <div class="popup-content">
+      <p>Are you sure you want to Exit?</p>
+      <div class="button-group">
+        <button id="exitButton">Yes</button>
+        <button id="closePopup">No</button>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br>
+  <center><h1>About</h1></center>
+  <p style="text-align: justify; padding-left: 20px; padding-right: 20px;">
+    Madridejos School Locator and Viewer is a digital application designed to help users easily locate and view all elementary, high school, and college institutions within Madridejos. The app features an interactive map that displays the precise locations of each school, allowing users to click on a marker to view the name, photo, and basic information about the institution. It serves as a helpful tool for students, parents, and visitors who want to explore educational options in the area. This version is for viewing only, focusing on providing accurate school locations and visual references to guide users. The interface is simple, user-friendly, and ideal for both locals and newcomers.
+  </p>
+
+  <script>
+    $(document).ready(function () {
+      // Show the exit confirmation popup
+      $(document).on("click", "#exitConfirmButton", function () {
+        $("#popupCloseRight").css("display", "flex"); // Show the popup
+      });
+
+      // Close the exit confirmation popup
+      $(document).on("click", "#closePopup", function () {
+        $("#popupCloseRight").css("display", "none"); // Hide the popup
+      });
+
+      // Exit and redirect to a blank page
+      document.getElementById("exitButton").addEventListener("click", function () {
+        window.location.href = "about:blank"; // Redirect to blank page
+      });
+    });
+  </script>
+  <script>
+    // Toggle Sidebar function
+    function toggleSidebar() {
+  var sidebar = document.getElementById("mySidebar");
+  var btn = document.querySelector(".open-btn");
+
+  if (sidebar.style.left === "0px") {
+    sidebar.style.left = "-250px"; // hide the sidebar
+    btn.classList.remove("moved"); // move button back to the left
+  } else {
+    sidebar.style.left = "0px"; // show the sidebar
+    btn.classList.add("moved"); // move button to the right
+  }
+}
+
+// Close the sidebar if clicking outside of it
+document.addEventListener('click', function(event) {
+  var sidebar = document.getElementById("mySidebar");
+  var btn = document.querySelector(".open-btn");
+
+  // Check if the click is outside the sidebar and the button
+  if (!sidebar.contains(event.target) && !btn.contains(event.target) && sidebar.style.left === "0px") {
+    sidebar.style.left = "-250px"; // hide the sidebar
+    btn.classList.remove("moved"); // move button back to the left
+  }
+});
+</script>
+</body>
+</html>
