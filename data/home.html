@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Madridejos Cebu Barangays Map</title>
+  <title>Omsim</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../includes/leaflet.css" />
@@ -191,20 +191,72 @@
     });
 
     var barangays = [
-      { name: "Bunakan", lat: 11.264239467827146, lng: 123.71877561681313, link: "bunakan.html" },
-      { name: "Kangwayan", lat: 11.252423217596032, lng: 123.73225085601626, link: "kangwayan.html" },
-      { name: "Kaongkod", lat: 11.272235379061796, lng: 123.74897420274317, link: "kaongkod.html" },
-      { name: "Kodia", lat: 11.250094172863964, lng: 123.71438565862236, link: "kodia.html" },
-      { name: "Maalat", lat: 11.276697050920621, lng: 123.71887979145556, link: "maalat.html" },
-      { name: "Malbago", lat: 11.161441661296902, lng: 124.02659008305527, link: "malbago.html" },
-      { name: "Mancilang", lat: 11.29232023816221, lng: 123.74036209628436, link: "mancilang.html" },
-      { name: "Pili", lat: 11.267562018557433, lng: 123.73066554413245, link: "pili.html" },
-      { name: "Poblacion", lat: 11.293077165362854, lng: 123.7326838943656, link: "poblacion.html" },
-      { name: "San Agustin", lat: 11.25634064032743, lng: 123.74952540947177, link: "sanagustin.html" },
-      { name: "Tabagak", lat: 11.257966422631275, lng: 123.71559157978882, link: "tabagak.html" },
-      { name: "Talangnan", lat: 11.295210773007557, lng: 123.72807505611718, link: "talangnan.html" },
-      { name: "Tarong", lat: 11.2866, lng: 123.7217, link: "tarong.html" },
-      { name: "Tugas", lat: 11.281419690466628, lng: 123.73446812471306, link: "tugas.html" }
+//Madridejos
+      { name: "Bunakan integrated school", lat: 11.264580646051689,  lng: 123.7144929153197, link: "m1.html" },
+      { name: "Madridejos Community College", lat: 11.263647461218257,   lng: 123.72354872512827, link: "m2.html" },
+      { name: "Kangwayan Elementary School", lat: 11.25227998808065,  lng: 123.73179316173277, link: "m3.html" },
+      { name: "Kaongkod Elementary School", lat: 11.272185430544818,  lng: 123.75174912313743, link: "m4.html" },
+      { name: "Kodia Integrated School", lat: 11.249601999064705,  lng: 123.7204098267509, link: "m5.html" },
+      { name: "Maalat Elementary School", lat: 11.26886313014847,  lng: 123.72415423140357, link: "m6.html" },
+      { name: "Malbago Elementary School", lat:   11.289920815645855,  lng: 123.7443177397656, link: "m7.html" },
+      { name: "Mancilang Elementary School", lat: 11.295777131958722,  lng: 123.73713344248289, link: "m8.html" },
+      { name: "Madridejos National High School", lat: 11.292315082563528,   lng: 123.7332201623665, link: "m9.html" },
+      { name: "Madridejos Central Elementary School", lat: 11.295761350445401,   lng: 123.73343735863892, link: "m10.html" },
+      { name: "Pili Elementary School", lat: 11.266558803703996,  lng: 123.73354196374339, link: "m11.html" },
+      { name: "San Agustin National High School", lat: 11.256293017293475,  lng: 123.75047609175188, link: "m12.html" },
+      { name: "San Agustin Elementary School", lat: 11.254876428198362,   lng: 123.74710905025908, link: "m13.html" },
+      { name: "Tabagak Elementary School", lat: 11.257030903288406,  lng: 123.71550679032312, link: "m14.html" },
+      { name: "TALANGNAN ELEMENTARY SCHOOL", lat: 11.292694459810043, lng: 123.72586280064068, link: "m15.html" },
+      { name: "Tarong Elementary School", lat: 11.282045571785126,  lng: 123.72130572752961, link: "m16.html" },
+      { name: "Salazar Colleges of Science and Institute of Technology", lat: 11.291341177310601, lng: 123.7303219731228, link: "m17.html" },
+      { name: "Tugas Elementary School", lat: 11.279206064653884,  lng: 123.73400866941792, link: "m18.html" },
+//Bantaya
+      { name: "Atop-atop Elementary School", lat: 11.24331373580103, lng: 123.75525525330363, link: "b1.html" },
+      { name: "Baod Elementary School", lat: 11.210948077696383, lng: 123.70105199192578, link: "b2.html" },
+      { name: "Oboob Integrated School", lat: 11.15788555636578,  lng: 123.744583277199, link: "b3.html" },
+      { name: "Sillon Elementary School", lat: 11.19753119617591,  lng: 123.77155802261453, link: "b4.html" },
+      { name: "Tamiao Elementary School", lat: 10.438252781973295, lng: 123.99413669058971, link: "b5.html" },
+      { name: "Botigues Integrated School", lat: 11.104115938161224, lng: 123.67244410979224, link: "b6.html" },
+      { name: "Sungko Elementary School", lat: 11.151876389965121,   lng: 123.72979376386836, link: "b7.html" },
+      { name: "Guiwanon Elementary School", lat: 11.199734277417159, lng: 123.70680753662074, link: "b8.html" },
+      { name: "Doong Elementary School", lat: 11.078191818003038,  lng: 123.64183784871811, link: "b9.html" },
+      { name: "Hilotongan Integrated School", lat: 11.145019589027067,  lng: 123.64435414262103, link: "b10.html" },
+      { name: "Puti-an Elementary School", lat: 11.224957092093097,  lng: 123.71024259455072, link: "b11.html" },
+      { name: "Kabac Elementary School", lat: 11.23837771917099, lng: 123.69976942029004, link: "b12.html" },
+      { name: "Mambacayao Elementary School", lat: 11.219278685871476,   lng: 123.72161839184916, link: "b13.html" },
+      { name: "Bantayan Southern Institute", lat: 11.171449299056219,   lng: 123.716608025485, link: "b14.html" },
+      { name: "Bantayan Central School", lat: 11.168891580544937,   lng: 123.72353885348724, link: "b15.html" },
+      { name: "St. Paul Academy", lat: 11.16726228295463,   lng: 123.71942851681789, link: "b16.html" },
+      { name: "Bantayan Science High School", lat: 11.172852200696624,  lng: 123.72135595765731, link: "b17.html" },
+      { name: "Bantayan Science Senior High School", lat: 11.17272786828331,   lng: 123.72125939813743, link: "b18.html" },
+      { name: "Silvino Du Memorial School", lat: 11.179244937988074,   lng: 123.71633369063325, link: "b19.html" },
+      { name: "Balintawak Elementary School", lat: 11.184174710549996,   lng: 123.71517438412513, link: "b20.html" },
+      { name: "Kabangbang Elementary School", lat: 11.20961121215944, lng: 123.71980244927255, link: "b21.html" },
+      { name: "Patao National High School", lat: 11.221511998279716,  lng: 123.69683304295617, link: "b22.html" },
+      { name: "San Jose Elementary School", lat: 11.221272946014215,   lng: 123.69711473295678, link: "b23.html" }, 
+      { name: "Vito Elementary School", lat: 11.207945488674829,   lng: 123.74929705428396, link: "b24.html" }, 
+      { name: "Kangkaibe Elementary School", lat: 11.188917841813128,   lng: 123.74175479610572, link: "b25.html" }, 
+      { name: "Cebu Technological University - Bantayan Extension", lat: 11.184351020597038,   lng: 123.72654397397208, link: "b26.html" }, 
+      { name: "Doong National High School", lat: 11.077265272161856,   lng: 123.64214362053104, link: "b27.html" }, 
+      { name: "Sulangan Integrated School", lat: 11.139222831256728,  lng: 123.72426821668638, link: "b28.html" }, 
+      { name: "Patao National High School", lat: 11.21659747528454,   lng: 123.69805366166216, link: "b29.html" }, 
+      { name: "Mojon Elementary School", lat: 11.166179437537826,   lng: 123.75581672358176, link: "b30.html" }, 
+//Santa Fe
+      { name: "Bantayan Education and Skills Training Center Inc", lat: 11.158561020163372,   lng: 123.77948283968827, link: "f1.html" }, 
+      { name: "Marikaban Integrated School", lat: 11.155655826526726,   lng: 123.77330303041646, link: "f2.html" }, 
+      { name: "Okoy Elementary School", lat: 11.16769745437279,   lng: 123.778624533131, link: "f3.html" }, 
+      { name: "Baigad Elementary School", lat: 11.175444251755614,   lng: 123.79321575052023, link: "f4.html" }, 
+      { name: "Talisay Primary School", lat: 11.160539903785898,   lng: 123.79493236445977, link: "f5.html" }, 
+      { name: "Vito Elementary School", lat: 11.152992706716418,   lng: 123.80190342577659, link: "f6.html" }, 
+      { name: "Santa Fe Central Elementary School", lat: 11.153066390212095,   lng: 123.80643099478337, link: "f7.html" }, 
+      { name: "Sta. Fe National High School Extension", lat: 11.153297966747155,  lng: 123.80675285984962, link: "f8.html" }, 
+      { name: "Santa Fe National High School", lat: 11.153303229842862,  lng:  123.8075199716678, link: "f9.html" }, 
+      { name: "Hagdan Elementary School", lat: 11.325965549059111,    lng:  123.8933256235845, link: "f10.html" }, 
+      { name: "Kinatarcan Elementary School", lat: 11.31913814677285,   lng:  123.88626901187638, link: "f11.html" }, 
+      { name: "Kinatarcan National High School", lat: 11.318704228366101,    lng:  123.88725390824233, link: "f12.html" }, 
+      { name: "Baigad Elementary School", lat: 11.185556268664865,    lng: 123.77967691311942, link: "f13.html" }, 
+      { name: "Hilantagaan National High School Extension", lat: 11.154382163535756,   lng: 123.80813151530194, link: "f14.html" }, 
+      { name: "Hilantagaan Elementary School", lat:   11.202819521462757,  lng: 123.82169276422216, link: "f15.html" }
     ];
 
     barangays.forEach(function(b) {
